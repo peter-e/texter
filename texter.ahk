@@ -365,6 +365,11 @@ else
 		FormatTime, SDate, , ShortDate
 		StringReplace, ReplacementText, ReplacementText, `%ds, %SDate%, All
 	}
+	IfInString,ReplacementText, `%fd
+	{
+		FormatTime, ProperFDate, ,yyyy.MM.dd-HHmm
+		StringReplace, ReplacementText, ReplacementText, `%fd, %ProperFDate%, All
+	}
 	IfInString,ReplacementText,`%dl
 	{
 		FormatTime, LDate, , LongDate
