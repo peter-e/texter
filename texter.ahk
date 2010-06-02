@@ -161,7 +161,7 @@ Loop
 		  PossibleMatch=
 		}
       }
-	if (SubStr(ErrorLevel, 1, 6) = "EndKey")
+	if ((SubStr(ErrorLevel, 1, 6) = "EndKey") AND (SubStr(ErrorLevel, 8) != "not found"))
     { ;trigger found
       Trigger := SubStr(ErrorLevel, 8)
 	  if (Trigger = "Backspace")
